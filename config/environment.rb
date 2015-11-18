@@ -14,6 +14,3 @@ ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => true
 }
 config.action_mailer.delivery_method ||= :smtp
-config.action_mailer.default_url_options = {
-  :host => 'https://guarded-brushlands-9981.herokuapp.com/'
-}
