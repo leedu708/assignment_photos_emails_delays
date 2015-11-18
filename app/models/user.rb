@@ -4,4 +4,11 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :profile_photo, :content_type => /\Aimage\/.*\Z/
   validates_attachment_size :profile_photo, :less_than => 3.megabytes
 
+  def self.send_welcome_email(id)
+
+    user = User.find(id)
+    UserMailer.welcome(user).deliver!
+
+  end
+
 end
