@@ -10,5 +10,9 @@
   <%= @user.email %>
 </p>
 
+<div>
+  <%= image_tag @user.profile_photo.url, width:'50%', height:'50%' %>
+</div>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
