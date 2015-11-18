@@ -83,7 +83,7 @@ Rails.application.configure do
       :s3_host_name => "s3.amazonaws.com",
       :bucket => Rails.application.secrets.s3_bucket_name,
       :access_key_id => Rails.application.secrets.aws_access_key_id,
-      :secret_access_key => Rails.application.secret.aws_secret_access_key
+      :secret_access_key => Rails.application.secrets.aws_secret_access_key
     }
   }
 end
